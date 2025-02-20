@@ -1,0 +1,24 @@
+﻿   Qt/MSBuild: 3.3.0.13
+  Reading Qt configuration (D:/Qt/6.8.0/msvc2022_64/bin/qmake)
+   Qt: 6.8.0
+  ImageListWidget.cpp
+  ImageLoader.cpp
+  ImageManager.cpp
+  ImageOperation.cpp
+  ImageTab.cpp
+  ImageTabManager.cpp
+  mainwindow.cpp
+  Opeartions.cpp
+  Singleton.cpp
+  ToolBarManager.cpp
+ImageListWidget.cpp(33,49): warning C4100: 'supportedActions': unreferenced formal parameter
+ImageTab.cpp(13,24): warning C4100: 'index': unreferenced formal parameter
+ImageLoader.cpp(73,70): warning C4129: 'G': unrecognized character escape sequence
+ImageLoader.cpp(73,70): warning C4129: 'I': unrecognized character escape sequence
+  moc_ImageOperation.cpp
+moc_mainwindow.obj : error LNK2019: unresolved external symbol "private: void __cdecl MainWindow::on_ImagePath_textChanged(class QString const &)" (?on_ImagePath_textChanged@MainWindow@@AEAAXAEBVQString@@@Z) referenced in function "public: virtual int __cdecl MainWindow::qt_metacall(enum QMetaObject::Call,int,void * *)" (?qt_metacall@MainWindow@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z)
+moc_mainwindow.obj : error LNK2019: unresolved external symbol "private: void __cdecl MainWindow::on_LoadImageButton_clicked(void)" (?on_LoadImageButton_clicked@MainWindow@@AEAAXXZ) referenced in function "public: virtual int __cdecl MainWindow::qt_metacall(enum QMetaObject::Call,int,void * *)" (?qt_metacall@MainWindow@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z)
+moc_mainwindow.obj : error LNK2019: unresolved external symbol "private: void __cdecl MainWindow::on_BrowseImagePath_clicked(void)" (?on_BrowseImagePath_clicked@MainWindow@@AEAAXXZ) referenced in function "public: virtual int __cdecl MainWindow::qt_metacall(enum QMetaObject::Call,int,void * *)" (?qt_metacall@MainWindow@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z)
+moc_mainwindow.obj : error LNK2019: unresolved external symbol "private: void __cdecl MainWindow::on_ImageTabs_tabCloseRequested(int)" (?on_ImageTabs_tabCloseRequested@MainWindow@@AEAAXH@Z) referenced in function "public: virtual int __cdecl MainWindow::qt_metacall(enum QMetaObject::Call,int,void * *)" (?qt_metacall@MainWindow@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z)
+moc_mainwindow.obj : error LNK2019: unresolved external symbol "private: void __cdecl MainWindow::on_ImagesList_itemClicked(class QListWidgetItem *)" (?on_ImagesList_itemClicked@MainWindow@@AEAAXPEAVQListWidgetItem@@@Z) referenced in function "public: virtual int __cdecl MainWindow::qt_metacall(enum QMetaObject::Call,int,void * *)" (?qt_metacall@MainWindow@@UEAAHW4Call@QMetaObject@@HPEAPEAX@Z)
+debug\\ImageProcessingApp.exe : fatal error LNK1120: 5 unresolved externals

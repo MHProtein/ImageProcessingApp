@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1615</width>
+    <height>1016</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_8" stretch="500,150">
+    <item>
+     <widget class="QTabWidget" name="ImageTabs">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="autoFillBackground">
+       <bool>true</bool>
+      </property>
+      <property name="currentIndex">
+       <number>-1</number>
+      </property>
+      <property name="tabsClosable">
+       <bool>true</bool>
+      </property>
+      <property name="movable">
+       <bool>true</bool>
+      </property>
+      <property name="tabBarAutoHide">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="ToolBars" stretch="0,0,0,0,100">
+      <item>
+       <layout class="QVBoxLayout" name="LoadImage" stretch="0,0,0">
+        <property name="spacing">
+         <number>0</number>
+        </property>
+        <item>
+         <widget class="QLabel" name="label_3">
+          <property name="text">
+           <string>                             Load Image</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Path</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="ImagePath"/>
+          </item>
+          <item>
+           <widget class="QToolButton" name="BrowseImagePath">
+            <property name="text">
+             <string>...</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <item>
+           <widget class="QPushButton" name="LoadImageButton">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Load Image</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Orientation::Vertical</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="ImagesText">
+        <property name="text">
+         <string>                                 Images</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="ImageListWidget" name="ImagesList">
+        <property name="dragEnabled">
+         <bool>true</bool>
+        </property>
+        <property name="dragDropMode">
+         <enum>QAbstractItemView::DragDropMode::DragOnly</enum>
+        </property>
+        <property name="defaultDropAction">
+         <enum>Qt::DropAction::MoveAction</enum>
+        </property>
+        <property name="selectionMode">
+         <enum>QAbstractItemView::SelectionMode::SingleSelection</enum>
+        </property>
+        <property name="viewMode">
+         <enum>QListView::ViewMode::ListMode</enum>
+        </property>
+        <property name="sortingEnabled">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTabWidget" name="tabWidget">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="BasicProcessingTab">
+         <property name="layoutDirection">
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
+         <attribute name="title">
+          <string>BasicProcessing</string>
+         </attribute>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QToolBox" name="toolBox">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>500</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::Shape::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Shadow::Plain</enum>
+            </property>
+            <property name="currentIndex">
+             <number>0</number>
+            </property>
+            <widget class="QWidget" name="Add">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>339</width>
+               <height>150</height>
+              </rect>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>150</height>
+              </size>
+             </property>
+             <property name="baseSize">
+              <size>
+               <width>0</width>
+               <height>100</height>
+              </size>
+             </property>
+             <attribute name="label">
+              <string>Add</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="Subtract">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>339</width>
+               <height>258</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Subtract</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="Multiply">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>339</width>
+               <height>258</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Multiply</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="Division">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>339</width>
+               <height>258</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Division</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="Exponential">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>339</width>
+               <height>258</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Gamma</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="Logarithm">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>339</width>
+               <height>258</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Logarithm</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="HistogramEqualization">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>339</width>
+               <height>258</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Histogram Equalization</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="HistogramSpecification">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>339</width>
+               <height>258</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Histogram Specification</string>
+             </attribute>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="SpaceFilterTab">
+         <property name="accessibleName">
+          <string/>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LayoutDirection::LeftToRight</enum>
+         </property>
+         <attribute name="title">
+          <string>SpaceFilters</string>
+         </attribute>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QToolBox" name="toolBox_2">
+            <property name="frameShape">
+             <enum>QFrame::Shape::StyledPanel</enum>
+            </property>
+            <property name="currentIndex">
+             <number>8</number>
+            </property>
+            <widget class="QWidget" name="BoxFilter">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>BoxFilter</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="GaussianBlur">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>GaussianBlur</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="MinFilter">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>MinFilter</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="MedianFilter">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>MedianFilter</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="MaxFilter">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>MaxFilter</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="Laplacian8">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Laplacian8</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="Laplacian4">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Laplacian4</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="Sobel">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Sobel</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="Roberts">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>339</width>
+               <height>334</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Roberts</string>
+             </attribute>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="FrequencyFilters">
+         <attribute name="title">
+          <string>FrequencyFilters</string>
+         </attribute>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QToolBox" name="toolBox_3">
+            <property name="frameShape">
+             <enum>QFrame::Shape::StyledPanel</enum>
+            </property>
+            <property name="currentIndex">
+             <number>3</number>
+            </property>
+            <widget class="QWidget" name="LowPassFilters">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>LowPassFilters</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="HighPassFilters">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>HighPassFilters</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="HomomorphicFilter">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>HomomorphicFilter</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="NotchRejection">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>339</width>
+               <height>484</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>NotchRejection</string>
+             </attribute>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="Denoise">
+         <attribute name="title">
+          <string>Denoise</string>
+         </attribute>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QToolBox" name="toolBox_4">
+            <property name="frameShape">
+             <enum>QFrame::Shape::StyledPanel</enum>
+            </property>
+            <property name="currentIndex">
+             <number>10</number>
+            </property>
+            <widget class="QWidget" name="GaussianNoise">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>GaussianNoise</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="SaltAndPepperNoise">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>SaltAndPepperNoise</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="MotionBlur">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>MotionBlur</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="ArithmeticMeanFilter">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>ArithmeticMeanFilter</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="GeometricMeanFilter">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>GeometricMeanFilter</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="AdaptiveLocalNoiseReductionFilter">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>AdaptiveLocalNoiseReductionFilter</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="MedianFilter">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>MedianFilter</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="AdaptiveMedianFilter">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>AdaptiveMedianFilter</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="AlphaTrimmedMeanFilter">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>AlphaTrimmedMeanFilter</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="InverseFiltering">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>InverseFiltering</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="LowPassInverseFiltering">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>339</width>
+               <height>214</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Low-pass + Inverse</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="Wiener">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>Wiener</string>
+             </attribute>
+            </widget>
+            <widget class="QWidget" name="RadonTransform">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>100</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <attribute name="label">
+              <string>RadonTransform</string>
+             </attribute>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1615</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ImageListWidget</class>
+   <extends>QListWidget</extends>
+   <header>ImageListWidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

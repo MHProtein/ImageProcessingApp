@@ -1,0 +1,5 @@
+﻿   Qt/MSBuild: 3.3.0.13
+  Reading Qt configuration (D:/Qt/6.8.0/msvc2022_64/bin/qmake)
+   Qt: 6.8.0
+  Image.cpp
+  ImageProcessingApp.vcxproj -> D:\GitHub\ImageProcessingApp\release\ImageProcessingApp.exe
